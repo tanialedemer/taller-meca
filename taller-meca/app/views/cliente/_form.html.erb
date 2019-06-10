@@ -1,0 +1,37 @@
+<ul>
+<% 
+@cliente.errors.full_messages.each do |m|
+
+%>
+<li> <%= m %></li> 
+<% end %>
+</ul>
+<p>
+<%= p.label :Ruc %> </br>
+<%= p.text_field :ruc %>
+</p>
+<p>
+<%= p.label :Nombre%> </br>
+<%= p.text_field :nombre %>
+</p>
+<p>
+<%= p.label :Dirección%> </br>
+<%= p.text_field :direccion %>
+</p>
+<p>
+<%= p.label :Ciudad%> </br>
+<%= p.text_field :ciudad %>
+</p>
+<p>
+<%= p.label :Telefono%> </br>
+<%= p.text_field :telefono %>
+</p>
+<p>
+<%= p.label :Email%> </br>
+<%= p.text_field :email %>
+</p>
+<p>
+<%= p.submit "Enviar" %>
+<br>
+<%= link_to "Volver", cliente_index_path %>
+</p>

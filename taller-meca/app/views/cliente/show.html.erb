@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ruc:</strong>
+  <%= @cliente.ruc %>
+</p>
+<p>
+  <strong>Nombre:</strong>
+  <%= @cliente.nombre %>
+</p>
+<p>
+  <strong>Ciudad:</strong>
+  <%= @cliente.ciudad %>
+</p>
+<p>
+  <strong>Dirección:</strong>
+  <%= @cliente.direccion %>
+</p>
+<p>
+  <strong>Telefono:</strong>
+  <%= @cliente.telefono %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @cliente.email %>
+</p>
+<p>
+  <strong>Creado:</strong>
+  <%= @cliente.created_at %>
+</p>
+<p>
+  <strong>Actualizado:</strong>
+  <%= @cliente.updated_at %>
+</p>
+<%= link_to 'Edit', cliente_edit_path(@cliente) %> |
+<%= link_to 'Back', cliente_index_path %>

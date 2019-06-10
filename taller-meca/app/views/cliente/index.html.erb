@@ -1,0 +1,27 @@
+<h1>Lista Clientes</h1>
+<table>
+  <tr>
+    <th>Ruc</th>
+    <th>Nombre</th>
+    <th>Dirección</th>
+    <th>Ciudad</th>
+    <th>Telefono</th>
+    <th>Email</th>
+   <td><%= link_to 'New', :action => :new %></td>
+  </tr>
+
+<% @clientes.each do |c| %>
+  <tr>
+    <td><%= c.ruc %></td>
+    <td><%= c.nombre %></td>
+    <td><%= c.direccion %></td>
+    <td><%= c.ciudad %></td>
+    <td><%= c.telefono %></td>
+    <td><%= c.email %></td>
+
+    <td><%= link_to 'Show', :action => :show, :id => c.id %></td>
+    <td><%= link_to 'Edit', :action => :edit, :id => c.id %></td>
+    <td><%= link_to 'Destroy', { :action => :destroy, :id => c.id }, :method => :delete, :data => { :confirm => 'Desea eliminar de la lista?' } %></td>
+  </tr>
+<% end %>
+</table>
